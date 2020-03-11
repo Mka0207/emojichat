@@ -11,7 +11,7 @@ eChat = {
 
 eChat.config = {
     html = table.concat(emojichatHTML),
-    timestamps = true,
+    timestamps = false,
     position = 1,
     fadeTime = 12,
     defaultChatColour = Color(255, 255, 255, 255),

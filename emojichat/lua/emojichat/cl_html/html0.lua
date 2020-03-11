@@ -7,6 +7,7 @@ table.insert(emojichatHTML, [===[<!doctype html>
         body {
             background-color: transparent;
             color: rgb(230, 230, 230);
+			border-radius: 5px 5px 5px 5px;
             position: absolute;
             left: 0;
             top: 0;
@@ -15,9 +16,9 @@ table.insert(emojichatHTML, [===[<!doctype html>
             padding: 0;
             margin: 0;
             overflow: hidden;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-weight: 700;
-            text-shadow: 0 0 2px black;
+            text-shadow: 0 0 0;
             letter-spacing: 1px;
         }
 
@@ -37,12 +38,12 @@ table.insert(emojichatHTML, [===[<!doctype html>
         img.emoji {
             width: auto;
         }
-
+		
         #output {
             position: absolute;
             top: 0;
             left: 0;
-            bottom: 25px;
+            bottom: 32px;
             overflow: hidden;
             font-size: 14px;
         }
@@ -162,11 +163,11 @@ table.insert(emojichatHTML, [===[<!doctype html>
             bottom: 0;
             right: 0;
         }
-
+		
         #input-emoji-button-inner-wrapper {
-            border-radius: 5px;
+            border-radius: 0;
             text-align: center;
-            background: #666;
+            background: transparent;
             padding-left: 5px;
             padding-right: 7px;
         }
@@ -224,9 +225,6 @@ table.insert(emojichatHTML, [===[<!doctype html>
         .emoji-category-list-emoji {
             cursor: pointer;
         }
-
-
-
 
         /* From Bootstrap */
         body {

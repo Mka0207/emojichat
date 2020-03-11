@@ -2,15 +2,6 @@ TextComponentBuilder.SetDefaultChatColour(eChat.config.defaultChatColour)
 TextComponentBuilder.SetTimestampChatColour(eChat.config.timestampColour)
 TextComponentBuilder.SetTimestampsEnabled(eChat.config.timestamps)
 
-surface.CreateFont( "eChat_18", {
-    font = "Roboto Lt",
-    size = 18,
-    weight = 500,
-    antialias = true,
-    shadow = true,
-    extended = true,
-})
-
 function eChat.buildBox()
     eChat.frame = vgui.Create("DFrame")
     eChat.frame:MoveToBack()
@@ -31,11 +22,11 @@ function eChat.buildBox()
         draw.RoundedBox( 0, 0, 0, w, 25, Color( 80, 80, 80, 100 ) )
     end
 
-    local serverName = vgui.Create("DLabel", eChat.frame)
+   --[[ local serverName = vgui.Create("DLabel", eChat.frame)
     serverName:SetText( GetHostName() )
-    serverName:SetFont( "eChat_18")
+    serverName:SetFont( "ChatFont")
     serverName:SizeToContents()
-    serverName:SetPos( 5, 4 )
+    serverName:SetPos( 5, 4 )]]
 
     eChat.chatLog = vgui.Create( "DHTML" , eChat.frame )
     eChat.chatLog:SetSize( eChat.frame:GetWide() - 10, eChat.frame:GetTall() - 40 )

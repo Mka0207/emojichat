@@ -1,7 +1,7 @@
-hook.Remove("Initialize", "emojichat_init")
-hook.Add("Initialize", "emojichat_init", function()
+hook.Remove("InitPostEntity", "emojichat_init")
+hook.Add("InitPostEntity", "emojichat_init", function()
     -- TODO: Can this get called too early?
-    eChat.AddServerMessage("EmojiChat by Badger")
+    --eChat.AddServerMessage("EmojiChat by Badger")
     eChat.buildBox()
 end)
 

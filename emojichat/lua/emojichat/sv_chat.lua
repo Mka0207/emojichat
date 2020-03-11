@@ -1,4 +1,4 @@
-hook.Remove("PlayerConnect", "echat_playerconnect")
+--[[hook.Remove("PlayerConnect", "echat_playerconnect")
 hook.Add("PlayerConnect", "echat_playerconnect", function(name, ip)
     PrintMessage(HUD_PRINTTALK, name .. " has joined the server.")
 end)
@@ -11,7 +11,7 @@ end)
 hook.Remove("PlayerDisconnected", "echat_playerdisconnected")
 hook.Add("PlayerDisconnected", "echat_playerdisconnected", function(ply)
     PrintMessage(HUD_PRINTTALK, ply:Nick() .. " has left the server.")
-end)
+end)]]
 
 
 util.AddNetworkString("SetTypingStatus")

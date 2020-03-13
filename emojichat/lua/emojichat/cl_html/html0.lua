@@ -5,21 +5,19 @@ table.insert(emojichatHTML, [===[<!doctype html>
     <meta charset="UTF-8" />
     <style>
         body {
-            background-color: transparent;
-            color: rgb(230, 230, 230);
-			border-radius: 5px 5px 5px 5px;
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-            overflow: hidden;
-			font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-weight: 700;
-            text-shadow: 0 0 0;
-            letter-spacing: 1px;
+          background-color: transparent;
+          color: rgb(230, 230, 230);
+          border-radius: 5px 5px 5px 5px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          padding: 0;
+          margin: 0;
+          overflow: hidden;
+  	      font-family: Verdana, Geneva, Tahoma, sans-serif;
+          font-weight: 700;
         }
 
         a {
@@ -38,7 +36,7 @@ table.insert(emojichatHTML, [===[<!doctype html>
         img.emoji {
             width: auto;
         }
-		
+
         #output {
             position: absolute;
             top: 0;
@@ -90,7 +88,7 @@ table.insert(emojichatHTML, [===[<!doctype html>
         }
 
         .selected-suggestion {
-            background: rgba(128, 128, 255, 0.5);
+            background: rgba(192, 57, 43, 0.5);
         }
 
         .suggestion-up, .suggestion-down, .suggestion-select {
@@ -131,6 +129,11 @@ table.insert(emojichatHTML, [===[<!doctype html>
             display: inline-block;
         }
 
+        input:focus {
+          outline: none !important;
+          border:1px solid #c0392b!important;
+        }
+
         #input {
             position: absolute;
             bottom: 0;
@@ -144,11 +147,12 @@ table.insert(emojichatHTML, [===[<!doctype html>
             position: absolute;
             bottom: 0;
             left: 0;
-            right: 41px;
+            right: 0;
+            background-color: #171717;
         }
 
         #input-box {
-            background: transparent;
+            background: #222;
             color: rgb(230, 230, 230);
             height: 25px;
             font-size: 16px;
@@ -158,18 +162,11 @@ table.insert(emojichatHTML, [===[<!doctype html>
         }
 
         #input-emoji-button {
-            position: absolute;
-            cursor: pointer;
-            bottom: 0;
-            right: 0;
+            display: none;
         }
-		
+
         #input-emoji-button-inner-wrapper {
-            border-radius: 0;
-            text-align: center;
-            background: transparent;
-            padding-left: 5px;
-            padding-right: 7px;
+            display: none;
         }
 
         #input-emoji-list {
@@ -180,7 +177,7 @@ table.insert(emojichatHTML, [===[<!doctype html>
             bottom: 25px;
             width: 252px;
             line-height: 19px;
-            border-left: 1px solid orange;
+            border-left: 1px solid #c0392b;
             /* background: black; */
         }
 
@@ -211,7 +208,7 @@ table.insert(emojichatHTML, [===[<!doctype html>
         }
 
         .emoji-category-button:hover, .emoji-category-list-emoji:hover {
-            background: rgba(128, 128, 255, 0.5);
+            background: rgba(192, 57, 43, 0.5);
         }
 
         .active-emoji-category-button {
@@ -235,6 +232,7 @@ table.insert(emojichatHTML, [===[<!doctype html>
         button, input {
             overflow: visible;
         }
+
         button, input, optgroup, select, textarea {
             margin: 0;
             font-family: inherit;
@@ -263,7 +261,7 @@ table.insert(emojichatHTML, [===[<!doctype html>
         <div id="input-emoji-list-emojis"></div>
         <div id="input-emoji-category-list"></div>
         <div style="position: absolute;left: 0;bottom: 30px;height: 4px;right: 0;">
-            <div style="background: #ffb300;height: 50%;width: 75%;margin: 0 auto;margin-top: 2px;"></div>
+            <div style="background: #c0392b;height: 50%;width: 75%;margin: 0 auto;margin-top: 2px;"></div>
         </div>
     </div>
     <div id="input">

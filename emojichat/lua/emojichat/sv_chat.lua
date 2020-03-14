@@ -19,3 +19,13 @@ net.Receive("SetTypingStatus", function(len, ply)
     local isTyping = net.ReadBool()
     ply:SetNWBool("IsTyping", isTyping)
 end)
+
+hook.Remove("PlayerSay", "emojichat_urlfilter")
+hook.Add("PlayerSay", "emojichat_urlfilter", function( ply, text, team )
+	local http_start, http_end = string.find( text:lower(), "http" )
+	if http_start then
+		if not string.find( text:lower(), "fwkzt.com" ) then
+			return string.sub( text, 9, #text )
+		end
+	end
+end)

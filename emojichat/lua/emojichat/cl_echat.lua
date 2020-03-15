@@ -6,6 +6,7 @@ eChat = {
     Active = false,
     ChatMode = CHATMODE_GLOBAL,
     ExistingMessages = { },
+	LastText = "",
     HTMLOutput = nil
 }
 

@@ -55,6 +55,7 @@ hook.Remove("Think", "emojichat_fixmacusers")
 hook.Add("Think", "emojichat_fixmacusers", function()
 	if input.IsKeyDown( KEY_ESCAPE ) then
 		if eChat.frame:IsVisible() then
+			eChat.LastText = ""
 			eChat.hideBox()
 		end
 	elseif input.IsKeyDown( KEY_ENTER ) then

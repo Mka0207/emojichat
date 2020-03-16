@@ -54,19 +54,23 @@ end )
 hook.Remove("Think", "emojichat_fixmacusers")
 hook.Add("Think", "emojichat_fixmacusers", function()
 	if input.IsKeyDown( KEY_ESCAPE ) then
-		if eChat.frame:IsVisible() then
-			eChat.LastText = ""
-			eChat.hideBox()
+		if eChat.frame and eChat.frame:IsValid() then
+			if eChat.frame:IsVisible() then
+				eChat.LastText = ""
+				eChat.hideBox()
+			end
 		end
 	elseif input.IsKeyDown( KEY_ENTER ) then
-		if eChat.frame:IsVisible() then
-			if ECHAT_MODE == 1 then
-				LocalPlayer():ConCommand("say "..string.Trim(eChat.LastText))
-			else
-				LocalPlayer():ConCommand("say_team "..string.Trim(eChat.LastText))
+		if eChat.frame and eChat.frame:IsValid() then
+			if eChat.frame:IsVisible() then
+				if ECHAT_MODE == 1 then
+					LocalPlayer():ConCommand("say "..string.Trim(eChat.LastText))
+				else
+					LocalPlayer():ConCommand("say_team "..string.Trim(eChat.LastText))
+				end
+				eChat.LastText = ""
+				eChat.hideBox()
 			end
-			eChat.LastText = ""
-			eChat.hideBox()
 		end
 	end
 end)

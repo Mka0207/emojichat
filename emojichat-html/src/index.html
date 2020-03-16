@@ -6,7 +6,7 @@
     <style>
         body {
             background-color: transparent;
-            color: rgb(230, 230, 230);
+            color: #fff!important;
             position: absolute;
             left: 0;
             top: 0;
@@ -15,15 +15,13 @@
             padding: 0;
             margin: 0;
             overflow: hidden;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-family: Verdana, sans-serif;
             font-weight: 700;
-            text-shadow: 0 0 2px black;
             letter-spacing: 1px;
         }
 
         a {
             color: #4A99D2;
-            text-shadow: none;
             cursor: pointer;
         }
 
@@ -56,7 +54,7 @@
         }
 
         .line {
-            min-height: 3ex;
+            min-height: 3em;
         }
 
         .line>* {
@@ -75,7 +73,7 @@
             background: rgba(0, 0, 0, 0.85);
             display: none;
             z-index: 999;
-            font-size: 12px;
+            font-size: 16px;
             border-radius: 5px 5px 0 0;
         }
 
@@ -89,7 +87,7 @@
         }
 
         .selected-suggestion {
-            background: rgba(128, 128, 255, 0.5);
+            background: rgba(192, 57, 43, 0.5);
         }
 
         .suggestion-up, .suggestion-down, .suggestion-select {
@@ -99,7 +97,6 @@
             background: #aaa;
             text-align: center;
             color: black;
-            text-shadow: none;
             border-radius: 4px;
             font-size: 0.8em;
             border-right: 2px solid #777;
@@ -139,15 +136,21 @@
             display: none;
         }
 
+        input:focus {
+          outline: none !important;
+          border:1px solid #c0392b!important;
+        }
+
         #input-box-wrapper {
             position: absolute;
             bottom: 0;
             left: 0;
-            right: 41px;
+            right: 0;
+            width: 100%;
         }
 
         #input-box {
-            background: transparent;
+            background: #333;
             color: rgb(230, 230, 230);
             height: 25px;
             font-size: 16px;
@@ -179,7 +182,7 @@
             bottom: 25px;
             width: 252px;
             line-height: 19px;
-            border-left: 1px solid orange;
+            border-left: 1px solid #c0392b;
             /* background: black; */
         }
 
@@ -210,7 +213,7 @@
         }
 
         .emoji-category-button:hover, .emoji-category-list-emoji:hover {
-            background: rgba(128, 128, 255, 0.5);
+            background: rgba(192, 57, 43, 0.5);
         }
 
         .active-emoji-category-button {
@@ -231,8 +234,8 @@
         /* From Bootstrap */
         body {
             font-size: 1rem;
-            line-height: 1.5;
             text-align: left;
+            line-height: 1.5;
         }
         button, input {
             overflow: visible;
@@ -265,16 +268,13 @@
         <div id="input-emoji-list-emojis"></div>
         <div id="input-emoji-category-list"></div>
         <div style="position: absolute;left: 0;bottom: 30px;height: 4px;right: 0;">
-            <div style="background: #ffb300;height: 50%;width: 75%;margin: 0 auto;margin-top: 2px;"></div>
+            <div style="background: #c0392b;height: 50%;width: 75%;margin: 0 auto;margin-top: 2px;"></div>
         </div>
     </div>
     <div id="input">
         <span id="input-prompt"></span>
         <div id="input-box-wrapper">
             <input id="input-box" type="text" />
-        </div>
-        <div id="input-emoji-button" class="noselect">
-            <div id="input-emoji-button-inner-wrapper"></div>
         </div>
     </div>
 </body>

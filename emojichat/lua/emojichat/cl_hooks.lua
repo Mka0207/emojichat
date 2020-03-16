@@ -21,7 +21,7 @@ hook.Add("ChatText", "emojichat_joinleave", function( index, name, text, type )
     end
 end)
 
-ECHAT_MODE = CHATMODE_GLOBAL
+local ECHAT_MODE = CHATMODE_GLOBAL
 hook.Remove("PlayerBindPress", "emojichat_hijackbind")
 hook.Add("PlayerBindPress", "emojichat_hijackbind", function(ply, bind, pressed)
 	if disable_chatbox then return end
